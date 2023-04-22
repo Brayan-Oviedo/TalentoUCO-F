@@ -1,0 +1,123 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2vh 4vw 2vh 4vw;
+}
+
+mat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+    width: 100%;
+    
+    max-width: 500px;
+    background-color: #f6f6f6;
+}
+
+a {
+    text-decoration: none;
+    color: #9da1aa;
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+
+.formulario-titulo{
+    color: black;
+    text-align: center;
+}
+
+.formulario-campo {
+    width: 100%;
+    color: black;
+}
+
+.formulario-invitacion {
+    color: black;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.formulario-botones {
+    display: flex;
+    flex-flow: row no-wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.formulario-btn {
+    width: 40%;    
+}
+
+#formulario-btn-cancelar {
+    background-color: #9da1aa;
+    color: white;
+}
+
+
+/*++++++++++++  Material Input Color  ++++++++++++*/
+
+::ng-deep .mat-form-field .mat-form-field-label {
+    /** Change label color on label **/
+    color: #9da1aa !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    /** Change color of underline **/
+    background-color: #c3c3c3 !important;
+} 
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    /** Change label color on focused **/
+    color: #9da1aa !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+    /** underline border color on focused **/
+    background-color: black !important;
+}
+
+::placeholder { 
+    color: #c3c3c3;
+}
+
+
+/*++++++++++++  Material Input Select Color  ++++++++++++*/
+
+/** Change text color of selected value **/
+::ng-deep .mat-select-value {    
+    color: black !important;  
+}
+
+/** Change background color of options box **/
+::ng-deep .mat-select-panel {
+    background-color: #686868;
+}
+
+/** Change text color of options **/
+::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #9da1aa;
+}
+
+/** Change checkbox color of options **/
+::ng-deep .mat-option-pseudo-checkbox.mat-pseudo-checkbox-checked {
+    background-color: unset; /* transparent */
+}
+
+/** Change underline border color on focused **/
+::ng-deep .mat-primary .mat-form-field-underline .mat-form-field-ripple {
+    background-color: black !important;
+}
+
+/** Change underline border color **/
+

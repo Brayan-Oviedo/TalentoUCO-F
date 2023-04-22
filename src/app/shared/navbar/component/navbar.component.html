@@ -1,0 +1,13 @@
+<nav>
+
+  <app-menu *ngIf="estaLogueado()"></app-menu>
+
+  <mat-form-field *ngIf="busqueda">
+    <mat-label>{{ tituloBusqueda }}</mat-label>
+    <input id="itemBusqueda" type="text" matInput [(ngModel)]="item">
+    <mat-icon matSuffix (click)="doBuscar()" *ngIf="item" id="botonBusqueda">search</mat-icon>
+  </mat-form-field>
+
+  <h2 class="paginaActual" id="paginaActual">{{ paginaActual }}</h2>
+
+</nav>

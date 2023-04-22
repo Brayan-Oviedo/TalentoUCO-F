@@ -1,0 +1,14 @@
+mat-toolbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.btn-gris {
+    background-color: #9da1aa;
+    color: black;
+}

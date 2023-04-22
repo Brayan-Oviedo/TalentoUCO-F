@@ -1,0 +1,24 @@
+<mat-toolbar>
+
+  <div>
+    <button mat-icon-button routerLink="/home">
+      <mat-icon>directions_car</mat-icon>
+    </button>
+  
+    <span id="appName">{{ appName }}</span>
+  
+    <button mat-icon-button routerLink="/home">
+      <mat-icon>motorcycle</mat-icon>
+    </button>
+  </div>
+  
+  <div *ngIf="!estaLogueado()">
+    <button mat-raised-button routerLink="/auth/login">Ingresar</button>
+    <button mat-raised-button routerLink="/auth/register" class="btn-gris">Registrarte!</button>
+  </div>
+
+  <div *ngIf="estaLogueado()">
+    <button mat-raised-button routerLink="/auth/login" (click)="cerrarSesion()">Cerrar sesión</button>
+  </div>
+  
+</mat-toolbar> 

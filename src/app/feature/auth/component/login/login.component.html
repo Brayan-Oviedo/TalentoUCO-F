@@ -1,0 +1,31 @@
+<div class="body">
+
+    <mat-card>
+        <form [formGroup]="formUsuario" class="formulario"  (ngSubmit)="ingresar()">
+
+            <h2 class="formulario-titulo">Inicio de sesión</h2>
+
+            <div>
+                <mat-form-field class="formulario-campo">
+                    <mat-label>Nombre de usuario</mat-label>
+                    <input id="nombreUsuario" validar type="text" matInput placeholder="Ingresa el nombre de usuario"
+                        formControlName="nombreUsuario">
+                </mat-form-field>
+    
+                <mat-form-field class="formulario-campo">
+                    <mat-label>Contraseña</mat-label>
+                    <input id="contrasena" validar type="text" matInput placeholder="Ingresa la contraseña"
+                        formControlName="contrasena">
+                </mat-form-field>
+            </div>
+
+            <p class="formulario-invitacion">¿Aún no tienes una cuenta? <a routerLink="/auth/register">Registrate!</a></p>
+
+            <div class="formulario-botones">
+                <button class="formulario-btn" mat-raised-button id="formulario-btn-cancelar">Cancelar</button>
+                <button class="formulario-btn" mat-raised-button *ngIf="formUsuario.valid" type="submit">Ok</button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>

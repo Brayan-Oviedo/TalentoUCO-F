@@ -1,0 +1,22 @@
+mat-card {
+    min-width: 250px;
+    max-width: 400px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.fila {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+h2, h3 {
+    margin: auto;
+}
+
+
+.width-100 {
+    width: 100%;
+}

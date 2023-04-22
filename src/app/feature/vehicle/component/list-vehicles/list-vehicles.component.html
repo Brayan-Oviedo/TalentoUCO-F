@@ -1,0 +1,7 @@
+<div class="contenedor" >
+    <div class="" *ngFor="let vehiculo of vehiculos | async" id="listaOrdenes">
+
+        <app-vehicle-item [vehiculo]="vehiculo" (parquear)="parquearVehiculo($event)"></app-vehicle-item>
+
+    </div>
+</div>

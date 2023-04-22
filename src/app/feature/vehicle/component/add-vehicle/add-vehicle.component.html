@@ -1,0 +1,21 @@
+<div class="body">
+
+    <mat-card>
+        <form [formGroup]="formVehiculo" class="formulario"  (ngSubmit)="agregarVehiculo()">
+
+            <h2 class="formulario-titulo">Agregar vehiculo</h2>
+
+            <mat-form-field class="formulario-campo">
+                <mat-label>Placa</mat-label>
+                <input id="placa" validar type="text" matInput placeholder="Ingresa la placa del vehiculo"
+                    formControlName="placa">
+            </mat-form-field>
+
+            <div class="formulario-botones">
+                <button class="formulario-btn" routerLink="/home"  mat-raised-button id="formulario-btn-cancelar">Cancelar</button>
+                <button class="formulario-btn" mat-raised-button *ngIf="formVehiculo.valid" type="submit">Ok</button>
+            </div>
+        </form>
+    </mat-card>
+
+</div>
