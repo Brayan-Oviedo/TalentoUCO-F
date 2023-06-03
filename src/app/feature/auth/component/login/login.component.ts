@@ -51,4 +51,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  cancelar() {
+    this.router.navigate(['/']);
+  }
+
 }

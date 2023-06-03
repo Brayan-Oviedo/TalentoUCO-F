@@ -1,7 +1,7 @@
 <div class="body">
 
     <mat-card>
-        <form [formGroup]="formUsuario" class="formulario"  (ngSubmit)="registrar()">
+        <form [formGroup]="formUsuario" class="formulario">
 
             <h2 class="formulario-titulo">Registro</h2>
 
@@ -35,8 +35,8 @@
             <p class="formulario-invitacion">¿Ya tienes una cuenta? <a routerLink="/auth/login">Inicia sesión!</a></p>
 
             <div class="formulario-botones">
-                <button class="formulario-btn" mat-raised-button id="formulario-btn-cancelar">Cancelar</button>
-                <button class="formulario-btn" mat-raised-button *ngIf="formUsuario.valid" type="submit">Ok</button>
+                <button class="formulario-btn" mat-raised-button id="formulario-btn-cancelar" (click)="cancelar()">Cancelar</button>
+                <button class="formulario-btn" mat-raised-button *ngIf="formUsuario.valid" type="submit" (click)="registrar()">Ok</button>
             </div>
         </form>
     </mat-card>

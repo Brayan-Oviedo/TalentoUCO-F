@@ -50,6 +50,9 @@
       "@post-details/*": [
         "src/app/feature/post-details/*"
       ],
+      "@postulation/*": [
+        "src/app/feature/postulation/*"
+      ],
       "@vehicle/*": [
         "src/app/feature/vehicle/*"
       ]

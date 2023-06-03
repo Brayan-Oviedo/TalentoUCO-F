@@ -12,6 +12,7 @@ import { VehicleModule } from '@vehicle/vehicle.module';
 import { Interceptor } from '@core/interceptor/token-interceptor';
 import { OfferModule } from '@offer/offer.module';
 import { PostDetailsModule } from '@post-details/post-details.module';
+import { PostulationModule } from '@postulation/postulation.module';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PostDetailsModule } from '@post-details/post-details.module';
     AuthModule,
     OfferModule,
     PostDetailsModule,
+    PostulationModule,
     VehicleModule
   ],
   providers: [ CookieService, HttpService, Interceptor ],

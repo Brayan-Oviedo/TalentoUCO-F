@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Contacto } from '@contact/shared/model/contacto';
 import { AlertaService } from '@core/service/alerta.service';
-import { Oferta } from '@offer/shared/model/Oferta';
+import { Oferta } from '@offer/shared/model/oferta';
 import { OfertaService } from '@offer/shared/service/oferta.service';
 import { TokenService } from '@shared/token/service/token.service';
 import { Usuario } from '@user/shared/model/usuario';
@@ -43,10 +43,11 @@ export class AddOfferComponent implements OnInit {
 
   agregarOferta() {
     this.oferta = this.formOferta.value;
+    this.oferta.tags = this.obtenerTagsSeleccionados();
     this.ofertaService.agregarOferta(this.oferta).subscribe(
       _ => {
         this.alertaService.exitoso(OPERACION_EXITOSA, OFERTA_AGREGADA);
-        //this.router.navigate(['/offer/list']);
+        this.router.navigate(['/offer/list']);
       }
     )
   } 
@@ -70,6 +71,18 @@ export class AddOfferComponent implements OnInit {
       estaActiva: [true, [Validators.required]],
       tags: this.formBuilder.array(this.tags)
     });
+  }
+
+
+  private obtenerTagsSeleccionados(): string[] {
+    return this.formOferta.value.tags
+      .map((checked, index) => checked ? this.tags[index] : '')
+      .filter(tag => tag !== '');
+  }
+
+
+  cancelar() {
+    this.router.navigate(['/offer/list']);
   }
 
 }

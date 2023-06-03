@@ -1,45 +1,38 @@
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 2vh 4vw 2vh 4vw;
+#btn-ok {
+    background-color: #23C423;
 }
 
 mat-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1vh;
-    width: 100%;
-    
-    max-width: 500px;
-    background-color: #1d1d1d;
+    padding: 1%;
 }
 
-a {
-    text-decoration: none;
-    color: #9da1aa;
+.content {
+    min-width: 400px;
 }
 
 .espacio {
     height: 2vh;
 }
 
-
-.formulario {
-    width: 100%;
+.container {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     justify-content: center;
-    align-content: space-around;
+    align-items: center;    
 }
 
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
 
-.formulario-titulo {
-    color:white;;
-    text-align: center;
+.column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .formulario-campo {
@@ -49,21 +42,11 @@ a {
 
 .formulario-botones {
     display: flex;
-    flex-flow: row no-wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: flex-end;
     margin-top: 4vh;
 }
-
-.formulario-btn {
-    width: 40%;    
-}
-
-#formulario-btn-cancelar {
-    background-color: #9da1aa;
-    color: white;
-}
-
 
 /*++++++++++++  Material Input Color  ++++++++++++*/
 

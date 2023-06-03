@@ -1,0 +1,35 @@
+<mat-dialog-content class="content">
+
+    <mat-card>
+
+        <div class="container">
+
+            <form [formGroup]="formPostulacion">
+
+                <div class="column">
+
+                    <mat-label>{{ oferta.postDetalles.titulo }}</mat-label>
+
+                    <mat-icon *ngIf="oferta.estaActiva">check</mat-icon>
+                    <mat-icon *ngIf="!oferta.estaActiva">description</mat-icon>
+
+                    <div class="espacio"></div>
+                
+
+                    <mat-form-field class="formulario-campo">
+                        <textarea id="adjunto" validar  matInput placeholder="Ingresa una descripción" formControlName="adjunto" cdkTextareaAutosize
+                          cdkAutosizeMinRows="6"></textarea>
+                      </mat-form-field>
+
+                    <div class="formulario-botones">
+                        <button class="formulario-btn" mat-raised-button id="formulario-btn-cancelar" (click)="salir()">Cancelar</button>
+                        <button id="btn-ok" class="formulario-btn" mat-raised-button *ngIf="formPostulacion.valid" type="submit" (click)="agregarPostulacion()">Ok</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </mat-card>
+
+</mat-dialog-content>

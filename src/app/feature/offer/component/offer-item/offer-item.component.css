@@ -1,0 +1,38 @@
+mat-card {
+    min-width: 300px;
+    width: 20vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background-color: #1d1d1d;
+}
+
+.espacio {
+    height: 4vh;
+}
+
+.fila {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: space;
+}
+
+h2, h3 {
+    margin: auto;
+}
+
+
+.width-100 {
+    width: 100%;
+}
+
+#agregarPostulacion {
+    background-color: #23C423;
+}

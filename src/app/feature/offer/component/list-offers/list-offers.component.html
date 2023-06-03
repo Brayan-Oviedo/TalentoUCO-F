@@ -1,1 +1,7 @@
-<p>list-offers works!</p>
+<div class="contenedor" >
+    <div class="" *ngFor="let oferta of ofertas | async" id="listaOfertas">
+
+        <app-offer-item [oferta]="oferta" (agregarPostulacion)="agregarPostulacion($event)"></app-offer-item>
+
+    </div>
+</div>

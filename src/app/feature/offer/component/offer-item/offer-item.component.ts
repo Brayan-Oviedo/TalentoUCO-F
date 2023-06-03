@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Oferta } from '@offer/shared/model/oferta';
 
 @Component({
   selector: 'app-offer-item',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OfferItemComponent implements OnInit {
 
+  @Input() oferta: Oferta;
+
+  @Output() agregarPostulacion = new EventEmitter<Oferta>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  doAgregarPostulacion() {
+    this.agregarPostulacion.emit(this.oferta);
+  }
 }

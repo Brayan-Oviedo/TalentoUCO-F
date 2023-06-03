@@ -3,9 +3,11 @@ import { Contacto } from "@contact/shared/model/contacto";
 import { PostDetalles } from "@post-details/shared/model/post-detalles";
 
 export interface Oferta {
+    id: number;
     usuario: Usuario;
     postDetalles: PostDetalles;
     contacto: Contacto;
     estaActiva: boolean;
     tags: string[];
 }
+  

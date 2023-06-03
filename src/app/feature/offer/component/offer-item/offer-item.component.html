@@ -1,1 +1,72 @@
-<p>offer-item works!</p>
+<mat-card>
+
+    <mat-list>
+
+        <div class="fila">
+            <h2 id="oferta">Oferta</h2>
+            <mat-icon *ngIf="oferta.estaActiva">check</mat-icon>
+            <mat-icon *ngIf="!oferta.estaActiva">description</mat-icon>
+        </div>
+
+        <mat-list-item></mat-list-item>
+
+        <mat-list-item>
+            <mat-icon>title</mat-icon>
+            <h3 id="titulo">{{ oferta.postDetalles.titulo }}</h3>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon>description</mat-icon>
+            <h3 id="descripcion">{{ oferta.postDetalles.descripcion }}</h3>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon>contacts</mat-icon>
+            <h3 id="contactoNombre">{{ oferta.contacto.nombre }}</h3>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon>ContactMail</mat-icon>
+            <h3 id="contactoCorreo">{{ oferta.contacto.correo }}</h3>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon>AddicCall</mat-icon>
+            <h3 id="contactoCelular">{{ oferta.contacto.celular }}</h3>
+        </mat-list-item>
+
+
+        <mat-list-item>
+            <mat-icon>AddIcCall</mat-icon>
+            <h3 id="contactoCiudad">{{ oferta.contacto.ciudad }}</h3>
+        </mat-list-item>
+
+        <mat-list-item>
+            <mat-icon>hourglass_full</mat-icon>
+            <h3 id="contactoDireccion">{{ oferta.contacto.direccion }}</h3>
+        </mat-list-item>
+
+        <div class="espacio"></div>
+
+        <mat-list-item class="columna">
+            <mat-icon>Task</mat-icon>
+            <h3>Tags</h3>
+
+            <div class="columna">
+                <span *ngFor="let tag of oferta.tags">
+                    <mat-checkbox id="estaActiva" [(ngModel)]="oferta.estaActiva" [disabled]="true">{{ tag }}</mat-checkbox>
+                </span>
+            </div>
+        </mat-list-item>       
+        
+        <mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        
+
+        <mat-list-item>
+            <button id="agregarPostulacion" class="width-100" color="success" (click)="doAgregarPostulacion()" mat-raised-button>Agregar postulación</button>
+        </mat-list-item>
+    </mat-list>
+</mat-card>
