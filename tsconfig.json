@@ -41,6 +41,15 @@
       "@user/*": [
         "src/app/feature/user/*"
       ],
+      "@offer/*": [
+        "src/app/feature/offer/*"
+      ],
+      "@contact/*": [
+        "src/app/feature/contact/*"
+      ],
+      "@post-details/*": [
+        "src/app/feature/post-details/*"
+      ],
       "@vehicle/*": [
         "src/app/feature/vehicle/*"
       ]

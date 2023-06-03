@@ -22,6 +22,12 @@ const routes: Routes = [
     data: { rolesEsperados: [ Role.ADMINISTRADOR, Role.ESTUDIANTE ]}
   },
   {
+    path: 'offer',
+    loadChildren: () => import('@offer/offer.module').then(mod => mod.OfferModule),
+    canActivate: [SecurityGuard],
+    data: { rolesEsperados: [ Role.ADMINISTRADOR, Role.ESTUDIANTE ]}
+  },
+  {
     path: 'vehicle',
     loadChildren: () => import('@vehicle/vehicle.module').then(mod => mod.VehicleModule),
     canActivate: [SecurityGuard],

@@ -10,6 +10,9 @@ import { AuthModule } from './feature/auth/auth.module';
 import { HttpService } from '@core/service/http/http.service';
 import { VehicleModule } from '@vehicle/vehicle.module';
 import { Interceptor } from '@core/interceptor/token-interceptor';
+import { OfferModule } from '@offer/offer.module';
+import { PostDetailsModule } from '@post-details/post-details.module';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { Interceptor } from '@core/interceptor/token-interceptor';
     CoreModule,
     HomeModule,
     AuthModule,
+    OfferModule,
+    PostDetailsModule,
     VehicleModule
   ],
   providers: [ CookieService, HttpService, Interceptor ],

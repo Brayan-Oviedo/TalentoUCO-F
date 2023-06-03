@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Menu } from '../model/menu';
 
 
-const VEHICULO_TITULO = 'Vehiculo';
-const VEHICULO_ICONO = 'person';
+const OFERTA_TITULO = 'Oferta';
+const OFERTA_ICONO = 'person';
 
-const AGREGAR_VEHICULO_TITULO = 'Agregar vehiculo';
-const AGREGAR_VEHICULO_ICONO = 'person';
+const AGREGAR_OFERTA_TITULO = 'Agregar oferta';
+const AGREGAR_OFERTA_ICONO = 'person';
 
-const LISTAR_VEHICULOS_TITULO = 'Listar vehiculos';
-const LISTAR_VEHICULOS_ICONO = 'person';
+const LISTAR_OFERTA_TITULO = 'Listar ofertas';
+const LISTAR_OFERTA_ICONO = 'book';
 
 @Component({
   selector: 'app-menu',
@@ -18,16 +18,17 @@ const LISTAR_VEHICULOS_ICONO = 'person';
 })
 export class MenuComponent {
 
-  menuVehiculo = new Menu(VEHICULO_TITULO, VEHICULO_ICONO);
 
-  menuAgregarVehiculo = new Menu(
-    AGREGAR_VEHICULO_TITULO,
-    AGREGAR_VEHICULO_ICONO
+  menuOferta = new Menu(OFERTA_TITULO, OFERTA_ICONO);
+
+  menuAgregarOferta = new Menu(
+    AGREGAR_OFERTA_TITULO,
+    AGREGAR_OFERTA_ICONO
   );
 
-  menuListarVehiculos = new Menu(
-    LISTAR_VEHICULOS_TITULO,
-    LISTAR_VEHICULOS_ICONO
+  menuListarOfertas = new Menu(
+    LISTAR_OFERTA_TITULO,
+    LISTAR_OFERTA_ICONO
   );
 
 }

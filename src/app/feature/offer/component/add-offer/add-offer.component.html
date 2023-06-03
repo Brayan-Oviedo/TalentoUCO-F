@@ -1,0 +1,98 @@
+<div class="body">
+
+    <mat-card>
+
+        <form [formGroup]="formOferta" (ngSubmit)="agregarOferta()">
+
+            <div>
+
+                <h2 class="formulario-titulo">Ingrese la información de la oferta</h2>
+
+                <div formGroupName="postDetalles">
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Titulo</mat-label>
+                        <input id="titulo" validar type="text" matInput placeholder="Ingresa el titulo de la oferta"
+                            formControlName="titulo">
+                    </mat-form-field>
+
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Descripción</mat-label>
+                        <input id="descripcion" validar type="text" matInput
+                            placeholder="Ingresa la descripción de la oferta" formControlName="descripcion">
+                    </mat-form-field>
+                </div>
+
+
+                <h2 class="formulario-titulo">Información del contacto</h2>
+
+                <div formGroupName="contacto">
+
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Nombre</mat-label>
+                        <input id="nombre" validar type="text" matInput placeholder="Ingresa el nombre del contacto"
+                            formControlName="nombre">
+                    </mat-form-field>
+
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Correo</mat-label>
+                        <input id="correo" validar type="email" matInput placeholder="Ingresa el correo del contacto"
+                            formControlName="correo">
+                    </mat-form-field>
+
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Celular</mat-label>
+                        <input id="celular" validar type="tel" matInput placeholder="Ingresa el celular del contacto"
+                            formControlName="celular" type="tel">
+                    </mat-form-field>
+
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Ciudad</mat-label>
+                        <input id="ciudad" validar type="text" matInput placeholder="Ingresa la ciudad del contacto"
+                            formControlName="ciudad">
+                    </mat-form-field>
+
+                    <mat-form-field class="formulario-campo">
+                        <mat-label>Dirección</mat-label>
+                        <input id="direccion" validar type="text" matInput
+                            placeholder="Ingresa la dirección del contacto" formControlName="direccion">
+                    </mat-form-field>
+                </div>
+
+
+                <h2 class="formulario-titulo">Información general</h2>
+
+                <div>                    
+
+                    <div class="formulario-campo">
+                        <mat-label>Tags</mat-label>
+                        <ul>
+                            <li *ngFor="let tag of tags; let i = index" formArrayName="tags">
+                              <mat-checkbox [formControlName]="i">
+                                {{ tag }}
+                              </mat-checkbox>
+                            </li>
+                        </ul>
+
+                        <!--input id="tags" validar type="text" matInput placeholder="Ingresa los tags de la oferta"
+                            formControlName="tags"-->
+                    </div>
+
+                    <div class="formulario-campo">
+                        <mat-checkbox formControlName="estaActiva" validar>Activa</mat-checkbox>
+                    </div>
+
+                </div>
+
+
+                <div class="formulario-botones">
+                    <button class="formulario-btn" mat-raised-button id="formulario-btn-cancelar">Cancelar</button>
+                    <button class="formulario-btn" mat-raised-button *ngIf="formOferta.valid" type="submit">Ok</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </mat-card>
+
+</div>

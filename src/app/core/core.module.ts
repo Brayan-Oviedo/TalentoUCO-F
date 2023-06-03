@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ToolbarComponent } from './toolbar/component/toolbar.component';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule } from '@angular/forms';

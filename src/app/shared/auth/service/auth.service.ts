@@ -13,10 +13,10 @@ export class AuthService {
   constructor(private httpService: HttpService) { }
 
   public ingresar(usuario: Usuario): Observable<Token> {
-    return this.httpService.post<Usuario, Token>(`${environment.endpoint}/auth`, usuario);
+    return this.httpService.put<Usuario, Token>(`${environment.endpoint}/auth`, usuario);
   }
 
   public registrar(usuario: Usuario): Observable<boolean> {
-    return this.httpService.put<Usuario, boolean>(`${environment.endpoint}/auth`, usuario);
+    return this.httpService.post<Usuario, boolean>(`${environment.endpoint}/auth`, usuario);
   }
 }

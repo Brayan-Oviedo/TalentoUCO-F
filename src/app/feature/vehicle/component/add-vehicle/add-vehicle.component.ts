@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertaService } from '@core/service/alerta.service';
-import { Vehicle } from '@vehicle/shared/model/vehicle';
 import { VehicleService } from '@vehicle/shared/service/vehicle.service';
 
 
@@ -19,7 +18,7 @@ const VEHICULO_AGREGADO = 'Vehiculo agregado';
 export class AddVehicleComponent implements OnInit {
 
   formVehiculo: FormGroup;
-  vehiculo: Vehicle;
+  //vehiculo: Vehicl;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,13 +32,13 @@ export class AddVehicleComponent implements OnInit {
   }
 
   agregarVehiculo() {
-    this.vehiculo = this.formVehiculo.value;
+   /* this.vehiculo = this.formVehiculo.value;
     this.vehicleService.agregarVehiculo(this.vehiculo).subscribe(
       _ => {
         this.alertaService.exitoso(OPERACION_EXITOSA, VEHICULO_AGREGADO);
         this.router.navigate(['/home']);
       }
-    )
+    )*/
   } 
 
   private crearFormularioVehiculo() {

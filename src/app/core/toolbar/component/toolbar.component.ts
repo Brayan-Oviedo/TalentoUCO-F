@@ -8,7 +8,7 @@ import { TokenService } from '@shared/token/service/token.service';
 })
 export class ToolbarComponent implements OnInit {
   
-  appName = 'Parking';
+  appName = 'Talento UCO';
 
   constructor(private tokenService: TokenService) { }
 

@@ -5,23 +5,23 @@
 </button>
 <mat-menu #menus="matMenu">
 
-  <button mat-menu-item [matMenuTriggerFor]="vehiculo">
-    <mat-icon>{{ menuVehiculo.matIcono }}</mat-icon>
-    <span>{{ menuVehiculo.titulo }}</span>
+  <button mat-menu-item [matMenuTriggerFor]="oferta">
+    <mat-icon>{{ menuOferta.matIcono }}</mat-icon>
+    <span>{{ menuOferta.titulo }}</span>
   </button>
 
 </mat-menu>
 
-<mat-menu #vehiculo="matMenu">
+<mat-menu #oferta="matMenu">
 
-  <button routerLink="/vehicle/add" mat-menu-item>
-    <mat-icon>{{ menuAgregarVehiculo.matIcono }}</mat-icon>
-    <span>{{ menuAgregarVehiculo.titulo }}</span>
+  <button routerLink="/offer/add" mat-menu-item>
+    <mat-icon>{{ menuAgregarOferta.matIcono }}</mat-icon>
+    <span>{{ menuAgregarOferta.titulo }}</span>
   </button>
 
-  <button routerLink="/vehicle/list" mat-menu-item>
-    <mat-icon>{{ menuListarVehiculos.matIcono }}</mat-icon>
-    <span>{{ menuListarVehiculos.titulo }}</span>
+  <button routerLink="/offer/list" mat-menu-item>
+    <mat-icon>{{ menuListarOfertas.matIcono }}</mat-icon>
+    <span>{{ menuListarOfertas.titulo }}</span>
   </button>
 </mat-menu>
 
